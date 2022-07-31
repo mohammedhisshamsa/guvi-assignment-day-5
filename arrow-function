@@ -1,0 +1,87 @@
+1)PRINT odd numbers using Arrow function:
+
+
+var findodd = num => {
+    let res=[];
+    for(let key of num){
+        if(key%2 !== 0){
+           res.push(key); 
+        }
+    }
+    return res;
+    
+}
+console.log(findodd([1,2,3,4,5]));
+
+OUTPUT:
+[ 1, 3, 5 ]
+
+
+
+2)CONVERT ALL THE STRINGS TO TITLE CAPS IN STRING ARRAY
+
+var title_caps = str=> console.log(str.split(" ").map(words=>words[0].toUpperCase()+words.substr(1).toLowerCase()).join(" "));
+
+title_caps("arun is practicing");
+
+OUTPUT:
+Arun Is Practicing
+
+
+
+3) SUM OF ALL THE NUMBERS IN A ARRAY:
+
+var sum_all = num =>{
+    let count=0;
+    for(let key of num){
+        count = count + (+key);
+    }
+    return count;
+    
+};
+console.log(sum_all([1,2,3,4]));
+
+OUTPUT:
+10
+
+
+4) FIND PRIME NUMBERS IN A ARRAY:
+
+
+var prime_find = num =>{
+    num = num.filter((element) => {
+        for(var i=2; i<=Math.sqrt(element);i++){
+            if(element % 2 === 0) return false;
+        }
+        return true;
+    });
+    return num;
+};
+console.log(prime_find([2,3,4,5,6,7,8]));
+
+OUTPUT:
+[ 2, 3, 5, 7 ]
+
+
+5)RETURN ALL THE PALINDROMES IN A ARRAY:
+
+
+let palindrome = str =>{
+    let res=[];
+    for(let key of str){
+        let n = key.split("");
+        let r = n.reverse();
+        let v = r.join("");
+        if(key == v){
+            res.push(key);
+        }else{
+            continue;
+        }
+    }
+    return res;
+};
+console.log(palindrome(["arun","madam","rotor"]));
+
+OUTPUT:
+[ 'madam', 'rotor' ]
+
